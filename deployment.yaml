@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flash-app
+spec:
+  selector:
+    matchLabels:
+      app: flash-app
+  template:
+    metadata:
+      labels:
+        app: flash-app
+    spec:
+      containers:
+      - name: flash-app-container
+        image: mukeshjava92/git-argo-app:37
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
+
