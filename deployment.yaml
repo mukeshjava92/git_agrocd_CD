@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flash-app-container
-        image: mukeshjava92/git-argo-app:48
+        image: mukeshjava92/git-argo-app:49
         resources:
           limits:
             memory: "128Mi"
